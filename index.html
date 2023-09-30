@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllBear貓舍</title>
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+</head>
+
+<body>
+    <div class="large-header">
+        <div class="cat-nav">
+            <ul class="nav-entry">
+                <li>
+                    <a href="/" class="entry-title">
+                        <img width="18" height="18" src="./img/6059e7afe06bf1616504751260.png" alt="貓爪">
+                        <span>首頁</span>
+                    </a>
+                </li>
+                <li><a href="/" class="entry-title"><span>品種介紹</span></a></li>
+                <li><a href="/" class="entry-title"><span>貓咪寫真</span></a></li>
+                <li><a href="/" class="entry-title"><span>預約說明</span></a></li>
+                <li><a href="/" class="entry-title"><span>待售幼貓</span></a></li>
+                <li><a href="/" class="entry-title"><span>聯絡我們</span></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="cat-banner">
+        <ul id="ulID" class="banner-slides">
+            <input type="radio" id="control1" name="control" checked>
+            <input type="radio" id="control2" name="control">
+            <input type="radio" id="control3" name="control">
+
+            <li class="slide trans">1</li>
+            <li class="slide trans">2</li>
+            <li class="slide trans">3</li>
+
+            <div class="controls-visible">
+                <label for="control1"></label>
+                <label for="control2"></label>
+                <label for="control3"></label>
+            </div>
+        </ul>
+    </div>
+
+    <div class="cat-channel"></div>
+    </div>
+    <div class="main">
+        <div class="recommended-container"></div>
+        <div class="sidebar"></div>
+    </div>
+    <script type="text/javascript">
+        var index = 0
+        setInterval(() => {
+            var control = document.querySelector('.banner-slides')
+            var classVal = document.getElementById('ulID').getAttribute('class')
+            var labels = control.children
+            labels[index].checked = true
+            index++
+            if (index == 3) {
+                index = 0
+            }
+            // if (index == 2) {
+            //     sl.classList.remove('trans')
+            // }
+            // else {
+            //     sl.style.transition = `.5s transform ease-in-out`;
+            // }
+
+            // console.log(index, sl.classList)
+        }, 1500);
+    </script>
+</body>
+
+</html>
