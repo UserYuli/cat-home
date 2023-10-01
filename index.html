@@ -8,24 +8,40 @@
     <link rel="icon" href="./img/favicon.ico">
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/dropdown.css" />
+
 
 </head>
 
 <body>
     <div class="large-header">
-        <div class="cat-nav">
-            <ul class="nav-entry">
+        <div class="nav-toggle"></div>
+        <div class="cat-nav ">
+            <!-- <label for="entry-title" id="nav-toggle">🐾</label>
+            <input type="checkbox" id="entry-title"> -->
+
+            <ul class="nav-entry drop-down-menu">
                 <li>
                     <a href="/" class="entry-title">
                         <img width="18" height="18" src="./img/6059e7afe06bf1616504751260.png" alt="貓爪">
-                        <span>首頁</span>
+                        首頁
                     </a>
                 </li>
-                <li><a href="/" class="entry-title"><span>品種介紹</span></a></li>
-                <li><a href="/" class="entry-title"><span>貓咪寫真</span></a></li>
-                <li><a href="/" class="entry-title"><span>預約說明</span></a></li>
-                <li><a href="/" class="entry-title"><span>待售幼貓</span></a></li>
-                <li><a href="/" class="entry-title"><span>聯絡我們</span></a></li>
+                <li><a href="/" class="entry-title">品種介紹</a></li>
+                <li><a href="/" class="entry-title">貓咪寫真</a></li>
+                <li><a href="/" class="entry-title">預約說明</a></li>
+                <li><a href="/" class="entry-title">待售幼貓</a>
+                    <ul>
+                        <li><a href="#">小步舞曲</a>
+                        </li>
+                        <li><a href="#">曼赤肯</a>
+                        </li>
+                        <li><a href="#">布偶貓</a>
+                        </li>
+                        <li><a href="#">英國短毛貓</a>
+                    </ul>
+                </li>
+                <li><a href="/" class="entry-title">聯絡我們</a></li>
             </ul>
         </div>
     </div>
@@ -35,7 +51,7 @@
             <input type="radio" id="control2" name="control">
             <input type="radio" id="control3" name="control">
 
-            <li class="slide trans">1</li>
+            <li class="slide trans"><img src="./img/photo_2023-09-30_04-04-35.jpg" alt=""></li>
             <li class="slide trans">2</li>
             <li class="slide trans">3</li>
 
@@ -53,26 +69,12 @@
         <div class="recommended-container"></div>
         <div class="sidebar"></div>
     </div>
-    <script type="text/javascript">
-        var index = 0
-        setInterval(() => {
-            var control = document.querySelector('.banner-slides')
-            var classVal = document.getElementById('ulID').getAttribute('class')
-            var labels = control.children
-            labels[index].checked = true
-            index++
-            if (index == 3) {
-                index = 0
-            }
-            // if (index == 2) {
-            //     sl.classList.remove('trans')
-            // }
-            // else {
-            //     sl.style.transition = `.5s transform ease-in-out`;
-            // }
-
-            // console.log(index, sl.classList)
-        }, 1500);
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script>
+        var toggle = document.querySelector('.nav-toggle')
+        toggle.addEventListener('click', function () {
+            console.log('123')
+        })
     </script>
 </body>
 

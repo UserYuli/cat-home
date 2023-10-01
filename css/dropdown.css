@@ -1,0 +1,36 @@
+ul.drop-down-menu ul {
+    /*隱藏次選單*/
+    left: 99999px;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
+
+ul.drop-down-menu li:hover>ul {
+    /* 滑鼠滑入展開次選單*/
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    left: -1px;
+    border-right: 5px;
+}
+
+ul.drop-down-menu li:hover>ul ul {
+    /* 滑鼠滑入之後、次選單之後的選單依舊隱藏*/
+    left: 99999px;
+}
+
+ul.drop-down-menu ul li:hover>ul {
+    /* 第二層之後的選單展開位置*/
+    left: 90%;
+}
+
+.drop-down-menu>li>ul>li {
+    color: #343a40;
+    padding: 10px 20px;
+    border-bottom: 1px solid #b88d8d;
+    z-index: 200;
+    position: relative;
+    background-color: white;
+
+}
